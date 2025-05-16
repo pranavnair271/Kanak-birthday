@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Kanak 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4ec, #e0c3fc);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      animation: fadeIn 1.5s ease-in-out forwards;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card .hover-message {
+      opacity: 0;
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.75rem;
+      color: #888;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover .hover-message {
+      opacity: 1;
+    }
+
+    .description {
+      max-width: 700px;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1rem;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    img.spotify-code {
+      margin-top: 10px;
+      border-radius: 8px;
+      width: 140px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Kanak! 🎉</h1>
+  <div class="cards">
+    <div class="card" onclick="playVideo()">
+      🎥 <br>
+      A Small Birthday Video Surprise
+      <div class="hover-message">Hover to feel more love 🥺</div>
+    </div>
+    <div class="card" onclick="window.open('https://open.spotify.com/playlist/2UDbSGRu7j9XOQOtrvdPIg?si=qvMxgtvOTXCB3SAzvZxu0g', '_blank')">
+      🎧 <br>
+      Playlist From My Heart
+      <br><br>
+      <img src="/mnt/data/WhatsApp Image 2025-04-10 at 6.55.32 PM.jpeg" alt="Spotify Code" class="spotify-code">
+      <div class="hover-message">There’s meaning in every beat 💌</div>
+    </div>
+  </div>
+
+  <div class="description">
+    Every track in the playlist means something, just like every moment with you means the world to me. I’m not good with words, but music helps me say what I feel. You’ve always been more than just a best friend — you’re that one constant, that one warmth. You’ve shaped parts of me I never knew needed healing. This isn’t just a gift, it’s my way of saying thank you for staying, for caring, and for making me feel like I matter.
+    <br><br>
+    I go by '999' — it’s my reminder that even in the worst, I can turn it into something beautiful. You’ve been that for me. If one day you find your perfect, please, please eliminate me from your life — not because I want you to, but because you deserve only peace, and I’d never want to be the chaos.
+  </div>
+
+  <div class="footer">
+    lovingly, <br>
+    — 999
+  </div>
+
+  <audio autoplay loop hidden>
+    <source src="https://open.spotify.com/track/1560osUcXrnov6yuOjXvc1?si=1c7ec3d0cf1b43f3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function playVideo() {
+      const videoUrl = prompt("Paste the link to your birthday video here (you can edit this JS to change the URL directly).", "https://your.video.link");
+      if (videoUrl) {
+        window.open(videoUrl, '_blank');
+      }
+    }
+  </script>
+</body>
+</html>
